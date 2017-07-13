@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDates", "FindDates\FindDates.csproj", "{8989F72D-59CA-4885-A60D-4FBE6A2B110D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInterface", "CommandLineInterface\CommandLineInterface.csproj", "{C7C6DC9D-F34A-4047-8AFD-66D966C4287D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8989F72D-59CA-4885-A60D-4FBE6A2B110D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8989F72D-59CA-4885-A60D-4FBE6A2B110D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8989F72D-59CA-4885-A60D-4FBE6A2B110D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8989F72D-59CA-4885-A60D-4FBE6A2B110D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C6DC9D-F34A-4047-8AFD-66D966C4287D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C6DC9D-F34A-4047-8AFD-66D966C4287D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C6DC9D-F34A-4047-8AFD-66D966C4287D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C6DC9D-F34A-4047-8AFD-66D966C4287D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

@@ -3,6 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <Version>0.0.1</Version>
+    <Authors>Alex Bierwagen</Authors>
+    <Company>VirtualChemistry</Company>
+    <Product>BackupManager</Product>
+    <RepositoryType>Git</RepositoryType>
+    <Description>Command line tool built for managing VirtualChemistry customer backups.</Description>
+    <PackageId>CommandLineInterface</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

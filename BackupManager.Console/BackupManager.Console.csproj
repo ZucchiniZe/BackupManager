@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FindDates\FindDates.csproj" />
+    <ProjectReference Include="..\BackupManager.FindDates\BackupManager.FindDates.csproj" />
   </ItemGroup>
 
 </Project>

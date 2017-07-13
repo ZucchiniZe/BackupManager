@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FindDates
+namespace BackupManager.FindDates
 {
     public class BackupEntry
     {

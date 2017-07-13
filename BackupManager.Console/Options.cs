@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace CommandLineInterface
+namespace BackupManager.Console
 {
     [Verb("find-date", HelpText = "Find the first and last occuring date in generated csv logs.")]
     public class FindDateOptions

@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Collections.Generic;
 using CommandLine;
-using FindDates;
+using BackupManager.FindDates;
 
-namespace CommandLineInterface
+namespace BackupManager.Console
 {
     class Program
     {
@@ -18,7 +18,7 @@ namespace CommandLineInterface
                     // generate csv output
                     foreach (BackupEntry entry in entries.Values.OrderBy(e => e.CustomerId))
                     {
-                        Console.WriteLine($"\"{entry.CustomerId}\",\"{entry.FirstDate.ToString("d")}\",\"{entry.LastDate.ToString("d")}\"");
+                        System.Console.WriteLine($"\"{entry.CustomerId}\",\"{entry.FirstDate.ToString("d")}\",\"{entry.LastDate.ToString("d")}\"");
                     }
                 });
         }

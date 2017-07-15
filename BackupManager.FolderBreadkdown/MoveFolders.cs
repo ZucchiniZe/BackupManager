@@ -19,17 +19,17 @@ namespace BackupManager.FolderBreadkdown
                 {
                     var directoryTime = DateTime.Parse(dir);
 
-
+                    // TODO: create the hierarchy for the folders
                 } catch
                 {
-
+                    // TODO: handle the error of parsing failing
                 }
             }
         }
 
         public static void Gather(string parentPath)
         {
-
+            // TODO: implement the gather function
         }
     }
 }

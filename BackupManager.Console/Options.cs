@@ -11,4 +11,20 @@ namespace BackupManager.Console
         [Option('i', "inventory", Required = true, HelpText = "Path to inventory csv file")]
         public string InventoryFile { get; set; }
     }
+
+    [Verb("folder-breakdown", HelpText = "Categorizes folders into a tree hierarchy based on their name and date")]
+    public class FolderBreakdownOptions
+    {
+        [Option('d', "distribute", HelpText = "Run the folder distributor")]
+        public bool Distrute { get; set; }
+        
+        [Option('g', "gather", HelpText = "Run the folder gatherer")]
+        public bool Gather { get; set; }
+
+        [Option('s', "source", Required = true, HelpText = "The source of where to look")]
+        public string SourcePath { get; set; }
+
+        [Option("dest", HelpText = "The destination of the distrubute function")]
+        public string DestinationPath { get; set; }
+    }
 }

@@ -17,9 +17,10 @@ namespace BackupManager.FolderBreadkdown
             if (!(Directory.Exists(destinationPath)))
                 return;
 
-            // go through and analyze the 
+            // go through and analyze the directories
             foreach (var path in Directory.EnumerateDirectories(sourcePath))
             {
+                // try to parse the time from the foldername and then copy it's contents
                 try
                 {
                     var dir = path.Split('\\').Last();
@@ -33,6 +34,7 @@ namespace BackupManager.FolderBreadkdown
                     // create all the dirs!
                     Directory.CreateDirectory(endDir);
 
+                    // instead of doing the easy thing and just moving the files, i need to do what's right and copy them.
                     CopyFolder(path, endDir);
                 }
                 catch (FormatException ex)

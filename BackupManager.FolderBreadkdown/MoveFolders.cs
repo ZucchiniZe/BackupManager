@@ -6,6 +6,11 @@ namespace BackupManager.FolderBreadkdown
 {
     public class MoveFolders
     {
+        /// <summary>
+        /// Take a top level directory containing timestamped folders and distribute into a hierarchal tree based upon year and month
+        /// </summary>
+        /// <param name="sourcePath">the original path of folders to distribute</param>
+        /// <param name="destinationPath">the path where folders are to be copied to in a tree</param>
         public static void Distribute(string sourcePath, string destinationPath)
         {
             // if the destination does not exist just skip
@@ -15,26 +20,45 @@ namespace BackupManager.FolderBreadkdown
             // go through and analyze the 
             foreach (var path in Directory.EnumerateDirectories(sourcePath))
             {
-                // try to parse the directory name
                 try
                 {
                     var dir = path.Split('\\').Last();
                     var dirDate = dir.Split('T').First();
 
-                    var directoryTime = Convert.ToDateTime(dirDate);
+                    var dirTime = Convert.ToDateTime(dirDate);
+                    
+                    var monthDir = Path.Combine(destinationPath, dirTime.Year.ToString(), dirTime.Month.ToString());
+                    var endDir = Path.Combine(monthDir, dir);
 
-                    var yearDir = directoryTime.Year.ToString();
-                    var monthDir = $"{destinationPath}{yearDir}\\{directoryTime.Month.ToString()}";
+                    // create all the dirs!
+                    Directory.CreateDirectory(endDir);
 
-                    // create the month directory
-                    // need to compose the year dir as well
-                    Directory.CreateDirectory(monthDir);
-
-                    Directory.Move(path, monthDir + "\\" + dir);
+                    CopyFolder(path, endDir);
                 }
                 catch (FormatException ex)
                 {
                     Console.WriteLine("Please select a source directory that has folders with date names.");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Copy the contents of a folder instead of moving it (does not recursively copy)
+        /// </summary>
+        /// <param name="sourcePath">the original location of the folder you would like to copy</param>
+        /// <param name="destPath">the new location of the folder you want to move to</param>
+        private static void CopyFolder(string sourcePath, string destPath)
+        {
+            if (Directory.Exists(sourcePath))
+            {
+                var files = Directory.GetFiles(sourcePath);
+
+                foreach (var file in files)
+                {
+                    var fileName = Path.GetFileName(file);
+                    var destFile = Path.Combine(destPath, fileName);
+
+                    File.Copy(file, destFile, overwrite: true);
                 }
             }
         }

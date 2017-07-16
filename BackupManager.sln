@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackupManager.Console", "Ba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackupManager.FindDates", "BackupManager.FindDates\BackupManager.FindDates.csproj", "{D98DA5D1-70C9-4F7F-95C9-F7656124B87F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackupManager.FolderBreadkdown", "BackupManager.FolderBreadkdown\BackupManager.FolderBreadkdown.csproj", "{05FE81C8-EABB-4DE1-A188-025F29DCABDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D98DA5D1-70C9-4F7F-95C9-F7656124B87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D98DA5D1-70C9-4F7F-95C9-F7656124B87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D98DA5D1-70C9-4F7F-95C9-F7656124B87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FE81C8-EABB-4DE1-A188-025F29DCABDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FE81C8-EABB-4DE1-A188-025F29DCABDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FE81C8-EABB-4DE1-A188-025F29DCABDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FE81C8-EABB-4DE1-A188-025F29DCABDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

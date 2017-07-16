@@ -15,7 +15,7 @@ namespace BackupManager.Console
     [Verb("folder-breakdown", HelpText = "Categorizes folders into a tree hierarchy based on their name and date")]
     public class FolderBreakdownOptions
     {
-        [Option('d', "distribute", HelpText = "Run the folder distributor")]
+        [Option('d', "distribute", HelpText = "Run the folder distributor. This or gather is required")]
         public bool Distrute { get; set; }
         
         [Option('g', "gather", HelpText = "Run the folder gatherer")]

@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BackupManager.FindDates\BackupManager.FindDates.csproj" />
+    <ProjectReference Include="..\BackupManager.FolderBreadkdown\BackupManager.FolderBreadkdown.csproj" />
   </ItemGroup>
 
 </Project>

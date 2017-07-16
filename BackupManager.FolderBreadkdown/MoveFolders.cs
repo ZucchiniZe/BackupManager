@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace BackupManager.FolderBreadkdown
 {
@@ -12,22 +13,33 @@ namespace BackupManager.FolderBreadkdown
                 return;
 
             // go through and analyze the 
-            foreach (var dir in Directory.EnumerateDirectories(sourcePath))
+            foreach (var path in Directory.EnumerateDirectories(sourcePath))
             {
                 // try to parse the directory name
                 try
                 {
-                    var directoryTime = DateTime.Parse(dir);
+                    var dir = path.Split('\\').Last();
+                    var dirDate = dir.Split('T').First();
 
-                    // TODO: create the hierarchy for the folders
-                } catch
+                    var directoryTime = Convert.ToDateTime(dirDate);
+
+                    var yearDir = directoryTime.Year.ToString();
+                    var monthDir = $"{destinationPath}{yearDir}\\{directoryTime.Month.ToString()}";
+
+                    // create the month directory
+                    // need to compose the year dir as well
+                    Directory.CreateDirectory(monthDir);
+
+                    Directory.Move(path, monthDir + "\\" + dir);
+                }
+                catch (FormatException ex)
                 {
-                    // TODO: handle the error of parsing failing
+                    Console.WriteLine("Please select a source directory that has folders with date names.");
                 }
             }
         }
 
-        public static void Gather(string parentPath)
+        public static void Gather(string sourcePath)
         {
             // TODO: implement the gather function
         }

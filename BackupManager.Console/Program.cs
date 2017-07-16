@@ -25,7 +25,16 @@ namespace BackupManager.Console
                 })
                 .WithParsed<FolderBreakdownOptions>(options =>
                 {
-                    // TODO write the code to call the folder breakdown methods
+                    if (options.Distrute)
+                    {
+                        MoveFolders.Distribute(options.SourcePath, options.DestinationPath);
+                    } else if (options.Gather)
+                    {
+                        MoveFolders.Gather(options.SourcePath);
+                    } else
+                    {
+                        System.Console.WriteLine("Please select a option, distrbute or gather");
+                    }
                 });
         }
     }

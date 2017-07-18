@@ -30,7 +30,7 @@ namespace BackupManager.Console
                         MoveFolders.Distribute(options.SourcePath, options.DestinationPath);
                     } else if (options.Gather)
                     {
-                        MoveFolders.Gather(options.SourcePath);
+                        MoveFolders.Gather(options.SourcePath, options.DestinationPath);
                     } else
                     {
                         System.Console.WriteLine("Please select a option, distrbute or gather");

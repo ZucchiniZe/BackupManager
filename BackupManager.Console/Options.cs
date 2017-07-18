@@ -24,7 +24,7 @@ namespace BackupManager.Console
         [Option('s', "source", Required = true, HelpText = "The source of where to look")]
         public string SourcePath { get; set; }
 
-        [Option("dest", HelpText = "The destination of the distrubute function")]
+        [Option("dest", Required = true, HelpText = "The destination of the distrubute function")]
         public string DestinationPath { get; set; }
     }
 }

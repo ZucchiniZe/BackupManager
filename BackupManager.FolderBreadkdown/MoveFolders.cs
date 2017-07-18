@@ -90,7 +90,7 @@ namespace BackupManager.FolderBreadkdown
         }
 
         /// <summary>
-        /// Recusrively get folders to a certain depth and only return the lowest depth of folders
+        /// Recursively get folders to a certain depth and only return the lowest depth of folders
         /// </summary>
         /// <param name="root">the root path to serch from</param>
         /// <param name="depth">the depth of the search (how many levels of directories do you want to go down)</param>
